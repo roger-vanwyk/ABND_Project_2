@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.example.android.myscorekeeper.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/score_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/team_a_score_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/team_a_label"
+                android:text="Team A"
+                style="@style/TeamLabelStyle"/>
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:text="0"
+                style="@style/ScoreTextStyle"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="-"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="30sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/team_b_score_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/team_b_label"
+                android:text="Team B"
+                style="@style/TeamLabelStyle"/>
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:text="0"
+                style="@style/ScoreTextStyle"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scoring_buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/try_container"
+            style="@style/ScoreTypeButtonContainerStyle">
+
+            <Button
+                android:id="@+id/team_a_try"
+                style="@style/ScoreButtonStyle"
+                android:text="+5"
+                android:onClick="updateTeamScore"/>
+
+            <TextView
+                android:text="Try"
+                style="@style/ScoreTypeLabelStyle"/>
+
+            <Button
+                android:id="@+id/team_b_try"
+                style="@style/ScoreButtonStyle"
+                android:text="+5"
+                android:onClick="updateTeamScore"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/try_conversion_container"
+            style="@style/ScoreTypeButtonContainerStyle">
+
+            <Button
+                android:id="@+id/team_a_try_conversion"
+                style="@style/ScoreButtonStyle"
+                android:text="+2"
+                android:onClick="updateTeamScore"/>
+
+            <TextView
+                android:text="Try Conversion"
+                style="@style/ScoreTypeLabelStyle"/>
+
+            <Button
+                android:id="@+id/team_b_try_conversion"
+                style="@style/ScoreButtonStyle"
+                android:text="+2"
+                android:onClick="updateTeamScore"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/penalties_point_container"
+            style="@style/ScoreTypeButtonContainerStyle">
+
+            <Button
+                android:id="@+id/team_a_penalty_kick"
+                style="@style/ScoreButtonStyle"
+                android:text="+3"
+                android:onClick="updateTeamScore"/>
+
+            <Button
+                android:id="@+id/team_a_penalty_try"
+                style="@style/ScoreButtonStyle"
+                android:text="+5"
+                android:onClick="updateTeamScore"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                style="@style/ScoreTypeLabelStyle"
+                android:text="Penalty Points" />
+
+            <Button
+                android:id="@+id/team_b_penalty_kick"
+                style="@style/ScoreButtonStyle"
+                android:text="+2"
+                android:onClick="updateTeamScore"/>
+
+            <Button
+                android:id="@+id/team_b_penalty_try"
+                style="@style/ScoreButtonStyle"
+                android:text="+3"
+                android:onClick="updateTeamScore"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/penalty_container"
+            style="@style/ScoreTypeButtonContainerStyle">
+
+            <Button
+                android:id="@+id/team_a_penalty_try"
+                style="@style/ScoreButtonStyle"
+                android:text="+5"
+                android:onClick="updateTeamScore"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                style="@style/ScoreTypeLabelStyle"
+                android:text="Penalty Try"/>
+
+            <Button
+                android:id="@+id/team_b_penalty_try"
+                style="@style/ScoreButtonStyle"
+                android:text="+5"
+                android:onClick="updateTeamScore"
+                tools:ignore="DuplicateIds" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Reset"
+            android:background="#333333"
+            android:textColor="#FFFFFF"
+            android:onClick="resetScores"/>
+
+    </LinearLayout>
+</LinearLayout>

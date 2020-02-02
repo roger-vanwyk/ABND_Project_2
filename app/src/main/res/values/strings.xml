@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Score Keeper</string>
+    <string name="my_score_keeper_app">My Score Keeper App</string>
+    <string name="team_a">Team A</string>
+    <string name="_0">0</string>
+    <string name="submit">Submit</string>
+    <string name="team_b">Team B</string>
+    <string name="_scoreA">0</string>
+    <string name="submitA">Submit</string>
+    <string name="submitB">submitB</string>
+    <string name="_scoreB">scoreB</string>
+    <string name="resetAll">RESET</string>
+</resources>
