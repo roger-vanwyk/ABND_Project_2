@@ -1,6 +1,8 @@
 # Project 2 of 6 for Android-Basics-Nanodegree by Google.
 African App Launchpad and Google study grant at Udacity.com
 
+https://user-images.githubusercontent.com/55032378/80043232-6a1d7b80-8501-11ea-84f1-7df3e2730cfe.jpg
+
 Copyright © 2020 Roger V. van Wyk. Some Rights Reserved.
 This copyright applies to ALL projects coded by myself, and not the four practice applications used in the Udacity lectures.
 
